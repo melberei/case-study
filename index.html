@@ -91,6 +91,50 @@
   .presenter { font-size: 17px; color: var(--ink-soft); }
   .presenter strong { color: var(--ink); font-weight: 600; }
 
+
+  /* ---------- Shared content-slide layout ---------- */
+  .slide-head { margin-bottom: 44px; }
+  .slide-head h2 { font-size: 52px; line-height: 1.1; margin-top: 14px; max-width: 1200px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; padding: 30px 34px;
+  }
+  .card h3 {
+    font-size: 15px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--ink-faint); margin-bottom: 18px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip {
+    font-size: 19px; font-weight: 500; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--line);
+    padding: 9px 16px; border-radius: 999px;
+  }
+  .chip.me { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .ticks { list-style: none; display: grid; gap: 14px; }
+  .ticks li { font-size: 20px; line-height: 1.4; color: var(--ink); padding-left: 30px; position: relative; }
+  .ticks li::before {
+    content: ""; position: absolute; left: 0; top: 9px;
+    width: 12px; height: 12px; border-radius: 3px; background: var(--accent);
+  }
+
+  /* ---------- Slide 2: Context ---------- */
+  .context-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .context-grid .stack { display: grid; gap: 24px; align-content: start; }
+  .timeline { margin-top: 28px; position: relative; display: grid; grid-template-columns: repeat(4, 1fr); }
+  .timeline::before {
+    content: ""; position: absolute; left: 10px; right: 10px; top: 9px;
+    height: 2px; background: var(--line);
+  }
+  .tl-step { position: relative; padding-right: 24px; }
+  .tl-step .dot {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--surface); border: 3px solid var(--accent);
+    position: relative; margin-bottom: 16px;
+  }
+  .tl-step.end .dot { background: var(--accent); }
+  .tl-step .when { font-size: 15px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .tl-step .what { font-size: 19px; line-height: 1.4; color: var(--ink); }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -150,11 +194,11 @@
             <div class="divider"></div>
             <div class="eyebrow">Merchant Services</div>
           </div>
-          <h1>Concept to executive demo in 8&nbsp;weeks</h1>
+          <h1>Concept to executive demo in 6&nbsp;weeks</h1>
           <p class="sub">Designing a personalized, responsive dashboard that helps merchant onboarding teams see their work, their wins, and their team at a glance.</p>
           <dl class="meta">
             <div><dt>Role</dt><dd>Design Lead</dd></div>
-            <div><dt>Timeline</dt><dd>~2 months</dd></div>
+            <div><dt>Timeline</dt><dd>6 weeks</dd></div>
             <div><dt>Focus</dt><dd>Dashboard &amp;<br>design system</dd></div>
           </dl>
         </div>
@@ -163,6 +207,55 @@
         </div>
       </div>
       <p class="footnote"><span class="presenter"><strong>Marylynne Berei</strong> · Senior Lead Product Designer</span> &nbsp;·&nbsp; Visuals recreated to protect confidential information</p>
+    </section>
+
+    <!-- ================= SLIDE 2: CONTEXT ================= -->
+    <section class="slide" data-title="Context">
+      <div class="slide-head">
+        <div class="eyebrow">Context</div>
+        <h2>A team of seven, four user roles, one leadership demo</h2>
+      </div>
+      <div class="context-grid">
+        <div class="stack">
+          <div class="card">
+            <h3>Who it was for</h3>
+            <div class="chips">
+              <span class="chip">Sales Consultants</span>
+              <span class="chip">Sales Managers</span>
+              <span class="chip">Product Approvers</span>
+              <span class="chip">Pricing Approvers</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>The team</h3>
+            <div class="chips">
+              <span class="chip me">Design Lead (me)</span>
+              <span class="chip">Product Designer</span>
+              <span class="chip">Content Strategist</span>
+              <span class="chip">Prototyper</span>
+              <span class="chip">Sr. Product Manager</span>
+              <span class="chip">Business Analyst</span>
+              <span class="chip">Lead Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>My role</h3>
+          <ul class="ticks">
+            <li>Led the team end to end on a 6 week schedule</li>
+            <li>Wrote the product brief and set direction</li>
+            <li>Built the full process in Confluence and Kanban so everyone could see it</li>
+            <li>Ran weekly user feedback sessions with 2 day turnarounds</li>
+            <li>Organized reviews, check ins, and schedules across all partners</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-step"><div class="dot"></div><div class="when">Late November</div><div class="what">Kickoff and product brief</div></div>
+        <div class="tl-step"><div class="dot"></div><div class="when">Weekly</div><div class="what">User feedback, 2 day turnarounds</div></div>
+        <div class="tl-step"><div class="dot"></div><div class="when">Thanksgiving &amp; Christmas</div><div class="what">Kept momentum through two holiday weeks</div></div>
+        <div class="tl-step end"><div class="dot"></div><div class="when">Week 2, January</div><div class="what">Leadership demo</div></div>
+      </div>
     </section>
 
   </main>
