@@ -33,13 +33,14 @@
   /* ---------- Stage: fixed 16:9 canvas scaled to fit any screen ---------- */
   .viewport {
     position: fixed; inset: 0;
-    display: grid; place-items: center;
+    overflow: hidden;
   }
   .stage {
     width: var(--stage-w); height: var(--stage-h);
     background: var(--bg);
-    position: relative;
+    position: absolute; left: 50%; top: 50%;
     transform-origin: center center;
+    transform: translate(-50%, -50%);
     box-shadow: 0 20px 60px rgba(0,0,0,.35);
     overflow: hidden;
   }
@@ -128,7 +129,7 @@
   @media print {
     body { background: #fff; overflow: visible; }
     .viewport { position: static; display: block; }
-    .stage { transform: none !important; box-shadow: none; overflow: visible; height: auto; background: none; }
+    .stage { position: static; transform: none !important; box-shadow: none; overflow: visible; height: auto; background: none; }
     .slide { position: relative; opacity: 1; visibility: visible; width: var(--stage-w); height: var(--stage-h); background: var(--bg); page-break-after: always; }
     .controls, .menu, .progress { display: none; }
     @page { size: 1600px 900px; margin: 0; }
@@ -145,7 +146,7 @@
       <div class="title-slide">
         <div>
           <div class="brand">
-            <img src="assets/wf-logo.png" alt="Wells Fargo" onerror="this.style.display='none'; this.nextElementSibling.style.display='none';">
+            <img src="wf-logo.png" alt="Wells Fargo" onerror="this.style.display='none'; this.nextElementSibling.style.display='none';">
             <div class="divider"></div>
             <div class="eyebrow">Merchant Services</div>
           </div>
@@ -158,7 +159,7 @@
           </dl>
         </div>
         <div class="hero-shot">
-          <img src="assets/merchant-dashboard.png" alt="Merchant Services dashboard showing active opportunities, success rates, delegated work and opportunity trends">
+          <img src="merchant-dashboard.png" alt="Merchant Services dashboard showing active opportunities, success rates, delegated work and opportunity trends">
         </div>
       </div>
       <p class="footnote"><span class="presenter"><strong>Marylynne Berei</strong> · Senior Lead Product Designer</span> &nbsp;·&nbsp; Visuals recreated to protect confidential information</p>
@@ -189,7 +190,7 @@
   // Scale the 1600x900 stage to fit the window
   function fit() {
     const s = Math.min(window.innerWidth / 1600, window.innerHeight / 900);
-    stage.style.transform = 'scale(' + s + ')';
+    stage.style.transform = 'translate(-50%, -50%) scale(' + s + ')';
   }
   window.addEventListener('resize', fit); fit();
 
