@@ -174,6 +174,36 @@
     font-family: "Source Serif 4", Georgia, serif; font-size: 25px; line-height: 1.4; color: var(--ink);
   }
 
+
+  /* ---------- Slide 4: Business decision ---------- */
+  .lede { font-size: 22px; line-height: 1.5; color: var(--ink-soft); max-width: 1180px; margin-top: -22px; margin-bottom: 34px; }
+  .options { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .option { position: relative; }
+  .option.chosen { border: 2px solid var(--accent); box-shadow: 0 18px 44px rgba(47,74,109,.16); }
+  .option h4 { font-size: 26px; font-weight: 600; color: var(--ink); margin-bottom: 18px; }
+  .option .pill {
+    position: absolute; right: 28px; top: 28px;
+    font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px;
+  }
+  .option.chosen .pill { background: var(--accent); color: #fff; }
+  .option.alt .pill { background: var(--bg); color: var(--ink-faint); border: 1px solid var(--line); }
+  .option.alt h4 { color: var(--ink-soft); }
+  .marks { list-style: none; display: grid; gap: 12px; }
+  .marks li { font-size: 20px; line-height: 1.4; padding-left: 34px; position: relative; color: var(--ink); }
+  .marks li::before { position: absolute; left: 0; top: 0; font-weight: 700; font-size: 20px; }
+  .marks.yes li::before { content: "\2713"; color: var(--accent); }
+  .marks.no li { color: var(--ink-soft); }
+  .marks.no li::before { content: "\2013"; color: var(--ink-faint); }
+  .flow { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .flow-step { position: relative; padding: 0 40px 0 0; }
+  .flow-step:not(:last-child)::after {
+    content: "\2192"; position: absolute; right: 10px; top: 0;
+    font-size: 24px; color: var(--accent);
+  }
+  .flow-step .when { font-size: 15px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .flow-step .what { font-size: 19px; line-height: 1.4; color: var(--ink); }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -326,6 +356,43 @@
           </ol>
           <p class="quote-line">Consultants wanted their work at a glance, on their terms.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 4: THE BUSINESS DECISION ================= -->
+    <section class="slide" data-title="The business decision">
+      <div class="slide-head">
+        <div class="eyebrow">The business decision</div>
+        <h2>Build on what we had, or buy another platform?</h2>
+      </div>
+      <p class="lede">Our demo had a second job: show Business Transformation leadership whether a custom dashboard could live in our own platform, moving from Angular to React, or whether we needed to invest in Salesforce.</p>
+      <div class="options">
+        <div class="card option chosen">
+          <span class="pill">Recommended</span>
+          <h4>Build in our own platform</h4>
+          <ul class="marks yes">
+            <li>Rebuilt from Angular to React, ready for responsive</li>
+            <li>One platform, one consistent experience for users</li>
+            <li>Uses the engineering team already in place</li>
+            <li>No new third-party tool to buy</li>
+            <li>Opens the door to a fully responsive Onboarding experience</li>
+          </ul>
+        </div>
+        <div class="card option alt">
+          <span class="pill">Alternative</span>
+          <h4>Add Salesforce</h4>
+          <ul class="marks no">
+            <li>Another tool to buy and maintain</li>
+            <li>Two platforms stitched together</li>
+            <li>More friction and mixed visual cues for users</li>
+            <li>Leaves the rest of Onboarding non-responsive</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flow">
+        <div class="flow-step"><div class="when">January demo</div><div class="what">The Business Transformation leader asked us to move it into the test environment</div></div>
+        <div class="flow-step"><div class="when">Proven in React</div><div class="what">Converted from Angular to React in our own platform, no Salesforce needed</div></div>
+        <div class="flow-step"><div class="when">Approved</div><div class="what">Full build moved forward with a new scrum team, with our team advising</div></div>
       </div>
     </section>
 
