@@ -135,6 +135,45 @@
   .tl-step .when { font-size: 15px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
   .tl-step .what { font-size: 19px; line-height: 1.4; color: var(--ink); }
 
+
+  /* ---------- Slide 3: Problem ---------- */
+  .problem-grid { display: grid; grid-template-columns: 640px 1fr; gap: 64px; align-items: start; }
+  .shot {
+    position: relative; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 24px 60px rgba(28,31,36,.14);
+    height: 600px; overflow: hidden;
+  }
+  .shot .frame { position: relative; }
+  .shot img { width: 100%; display: block; }
+  .shot-label { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; font-size: 17px; color: var(--ink-soft); }
+  .tag {
+    background: var(--ink); color: #fff;
+    font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    padding: 7px 12px; border-radius: 6px;
+  }
+  .pin {
+    position: absolute; transform: translate(-50%, -50%);
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--accent); color: #fff; border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(28,31,36,.3);
+    display: grid; place-items: center;
+    font-size: 16px; font-weight: 700;
+  }
+  .pains { list-style: none; display: grid; gap: 26px; counter-reset: pain; }
+  .pains li { display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: start; }
+  .pains .num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-size: 18px; font-weight: 700;
+  }
+  .pains strong { display: block; font-size: 23px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .pains p { font-size: 19px; line-height: 1.45; color: var(--ink-soft); }
+  .quote-line {
+    margin-top: 34px; padding-top: 24px; border-top: 1px solid var(--line);
+    font-family: "Source Serif 4", Georgia, serif; font-size: 25px; line-height: 1.4; color: var(--ink);
+  }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -256,6 +295,37 @@
         <div class="tl-step"><div class="dot"></div><div class="when">Weekly</div><div class="what">User feedback, 2 day turnarounds</div></div>
         <div class="tl-step"><div class="dot"></div><div class="when">Thanksgiving &amp; Christmas</div><div class="what">Kept momentum through two holiday weeks</div></div>
         <div class="tl-step end"><div class="dot"></div><div class="when">Week 2, January</div><div class="what">Leadership demo</div></div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 3: THE PROBLEM ================= -->
+    <section class="slide" data-title="The problem">
+      <div class="slide-head">
+        <div class="eyebrow">The problem</div>
+        <h2>Everything was there. Nothing was at a glance.</h2>
+      </div>
+      <div class="problem-grid">
+        <div>
+        <div class="shot-label"><span class="tag">Before</span>The original Merchant Onboarding dashboard</div>
+        <div class="shot">
+          <div class="frame">
+            <img src="old-dashboard.png" alt="Original Merchant Onboarding dashboard: a single text-only table of 25 opportunities with sortable columns and pagination">
+            <span class="pin" style="left:30%; top:17.6%">1</span>
+            <span class="pin" style="left:82%; top:28.8%">2</span>
+            <span class="pin" style="left:86%; top:53.5%">3</span>
+            <span class="pin" style="left:98%; top:38%">4</span>
+          </div>
+        </div>
+        </div>
+        <div>
+          <ol class="pains">
+            <li><span class="num">1</span><div><strong>A wall of text</strong><p>Consultants scanned rows of plain data to work out what needed them next.</p></div></li>
+            <li><span class="num">2</span><div><strong>No control</strong><p>Sort one column at a time. No way to shape a view around how they actually worked.</p></div></li>
+            <li><span class="num">3</span><div><strong>Status gaps slipped by</strong><p>Pending approvals and urgent follow-ups were easy to miss in all the scrolling.</p></div></li>
+            <li><span class="num">4</span><div><strong>Broke on smaller screens</strong><p>On tablets and small laptops, the right-hand columns were cut off, forcing a horizontal scroll.</p></div></li>
+          </ol>
+          <p class="quote-line">Consultants wanted their work at a glance, on their terms.</p>
+        </div>
       </div>
     </section>
 
