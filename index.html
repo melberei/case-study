@@ -224,8 +224,8 @@
   .pipeline .step em { font-style: normal; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 13px; margin-right: 10px; vertical-align: 1px; }
   .pipeline .arrow { color: var(--accent); font-size: 22px; }
   .setup-grid { display: grid; grid-template-columns: 820px 1fr; gap: 24px; }
-  .win { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 18px 44px rgba(28,31,36,.12); height: 470px; display: flex; flex-direction: column; }
-  .win-bar { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: #fafaf8; font-size: 14px; color: var(--ink-soft); }
+  .win { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: visible; box-shadow: 0 18px 44px rgba(28,31,36,.12); height: 462px; display: flex; flex-direction: column; }
+  .win-bar { border-radius: 12px 12px 0 0; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: #fafaf8; font-size: 14px; color: var(--ink-soft); }
   .win-bar .dots { display: flex; gap: 6px; }
   .win-bar .dots i { width: 10px; height: 10px; border-radius: 50%; background: #d9d6cf; display: block; }
   .win-bar b { color: var(--ink); font-weight: 600; }
@@ -253,6 +253,25 @@
   .kcard .k { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--ink-faint); }
   .kcard .pri { font-weight: 700; }
   .kcard .pri.h { color: #b4432f; } .kcard .pri.m { color: #9a6a12; }
+
+
+  /* ---------- Slide 6: Kickoff ---------- */
+  .kick-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .kick { padding: 28px 26px; display: flex; flex-direction: column; }
+  .kick .n { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 18px; margin-bottom: 18px; }
+  .kick h4 { font-size: 23px; line-height: 1.25; font-weight: 600; color: var(--ink); margin-bottom: 16px; min-height: 58px; }
+  .kick ul { list-style: none; display: grid; gap: 12px; }
+  .kick li { font-size: 18px; line-height: 1.45; color: var(--ink-soft); padding-left: 18px; position: relative; }
+  .kick li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .kick-note { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--line); font-family: "Source Serif 4", Georgia, serif; font-size: 26px; color: var(--ink); }
+
+  /* ---------- Slide 7: System callouts ---------- */
+  .win { position: relative; }
+  .win .pin { z-index: 3; }
+  .legend { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 24px; }
+  .legend div { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; font-size: 17.5px; line-height: 1.4; color: var(--ink-soft); }
+  .legend b { display: block; color: var(--ink); font-size: 18.5px; margin-bottom: 2px; }
+  .legend .num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px; }
 
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
@@ -488,20 +507,62 @@
       <div class="signoff"><span class="tag">Final approval</span>Head of Merchant Services and Business Transformation leadership</div>
     </section>
 
-    <!-- ================= SLIDE 6: HOW I SET UP THE WORK ================= -->
-    <section class="slide" data-title="How I set up the work">
+    <!-- ================= SLIDE 6: HOW I KICKED IT OFF ================= -->
+    <section class="slide" data-title="How I kicked it off">
       <div class="slide-head">
-        <div class="eyebrow">How I set up the work</div>
-        <h2>Everything in one place, from day one</h2>
+        <div class="eyebrow">How I kicked it off</div>
+        <h2>Before any pixels: people, access, and expectations</h2>
       </div>
-      <div class="pipeline">
-        <span class="step"><em>1</em>Rallied the team and Figma access</span><span class="arrow">&#8594;</span>
-        <span class="step"><em>2</em>Built the Confluence hub</span><span class="arrow">&#8594;</span>
-        <span class="step"><em>3</em>Kicked off with partners</span><span class="arrow">&#8594;</span>
-        <span class="step"><em>4</em>Grouped users for reviews</span>
+      <div class="kick-grid">
+        <div class="card kick">
+          <div class="n">1</div>
+          <h4>Rallied the team</h4>
+          <ul>
+            <li>Product Designer, Content Strategist, and Prototyper signed on</li>
+            <li>Not just willing, genuinely enthusiastic about the work</li>
+          </ul>
+        </div>
+        <div class="card kick">
+          <div class="n">2</div>
+          <h4>Took the friction out of Figma</h4>
+          <ul>
+            <li>A dedicated Figma space for the design team</li>
+            <li>A public view of in-flight screens, so sales never needed Figma training</li>
+            <li>Linked straight into Confluence with a macro</li>
+          </ul>
+        </div>
+        <div class="card kick">
+          <div class="n">3</div>
+          <h4>Kicked off with every partner</h4>
+          <ul>
+            <li>Product, Engineering, Business Analysis, Content, and Design together from day one</li>
+            <li>Set expectations and the timeline</li>
+            <li>Made sure everyone knew who we were and what each role owned</li>
+          </ul>
+        </div>
+        <div class="card kick">
+          <div class="n">4</div>
+          <h4>Grouped users by people, not titles</h4>
+          <ul>
+            <li>Many users wore more than one hat: a Product Approver could also be a Sales Consultant</li>
+            <li>One group spanning every role gave us the full picture in each review</li>
+          </ul>
+        </div>
+      </div>
+      <p class="kick-note">Week one set up everything that followed.</p>
+    </section>
+
+    <!-- ================= SLIDE 7: THE SYSTEM ================= -->
+    <section class="slide" data-title="The system I built">
+      <div class="slide-head">
+        <div class="eyebrow">The system I built</div>
+        <h2>One home for the work, open to everyone</h2>
       </div>
       <div class="setup-grid">
         <div class="win" aria-label="Recreated Confluence space for the project">
+          <span class="pin" style="left:228px; top:250px">1</span>
+          <span class="pin" style="left:420px; top:132px">2</span>
+          <span class="pin" style="left:806px; top:330px">3</span>
           <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><b>Confluence</b> · MOS-TEAM-DASH</div>
           <div class="conf">
             <div class="conf-side">
@@ -521,7 +582,7 @@
               <div class="crumbs">MOS-TEAM-DASH / Project home</div>
               <h5>Merchant Dashboard, Round 2 review</h5>
               <div class="conf-row">
-                <div class="conf-tile"><b>In-flight screens</b>Open to every user, no Figma login</div>
+                <div class="conf-tile"><b>In-flight screens</b>Public Figma view, linked by macro</div>
                 <div class="conf-tile"><b>This week</b>Review Tue · Updates by Thu</div>
                 <div class="conf-tile"><b>Status</b>On track for January demo</div>
               </div>
@@ -535,6 +596,7 @@
           </div>
         </div>
         <div class="win" aria-label="Recreated Jira Kanban board for the project">
+          <span class="pin" style="left:545px; top:20px">4</span>
           <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><b>Jira</b> · Kanban, fed by the design intake form</div>
           <div class="kanban">
             <div class="kcol"><h6>To do</h6>
@@ -556,6 +618,12 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="legend">
+        <div><span class="num">1</span><span><b>Every artifact in one space</b>Brief, schedule, prototypes, decisions, and notes</span></div>
+        <div><span class="num">2</span><span><b>In-flight screens for all</b>A public Figma view, no logins or training</span></div>
+        <div><span class="num">3</span><span><b>Feedback without meetings</b>A custom macro that saved input as users went</span></div>
+        <div><span class="num">4</span><span><b>Work everyone could track</b>The intake form fed the Kanban board</span></div>
       </div>
       <p class="footnote">Views recreated with fictional content to protect confidential information</p>
     </section>
