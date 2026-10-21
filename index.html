@@ -273,6 +273,23 @@
   .legend b { display: block; color: var(--ink); font-size: 18.5px; margin-bottom: 2px; }
   .legend .num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px; }
 
+
+  /* ---------- Slide 8: Feedback loop ---------- */
+  .loop { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 34px; margin-top: 4px; }
+  .lstep { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px 22px 24px; position: relative; }
+  .lstep:not(:last-child)::after { content: "\2192"; position: absolute; right: -27px; top: 50%; transform: translateY(-50%); color: var(--accent); font-size: 24px; font-weight: 600; }
+  .lstep .when { font-size: 13.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .lstep h4 { font-size: 21px; line-height: 1.25; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+  .lstep p { font-size: 16.5px; line-height: 1.45; color: var(--ink-soft); }
+  .lstep.key { border: 2px solid var(--accent); }
+  .return { display: block; width: 100%; height: 64px; margin-top: 6px; overflow: visible; }
+  .return path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 6 6; }
+  .return text { font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; fill: var(--accent); letter-spacing: .04em; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 18px; }
+  .stat { display: flex; align-items: baseline; gap: 16px; padding: 22px 26px; }
+  .stat .big { font-family: "Source Serif 4", Georgia, serif; font-size: 50px; font-weight: 600; color: var(--accent); line-height: 1; white-space: nowrap; }
+  .stat .lbl { font-size: 18px; line-height: 1.4; color: var(--ink-soft); }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -626,6 +643,31 @@
         <div><span class="num">4</span><span><b>Work everyone could track</b>The intake form fed the Kanban board</span></div>
       </div>
       <p class="footnote">Views recreated with fictional content to protect confidential information</p>
+    </section>
+
+    <!-- ================= SLIDE 8: THE FEEDBACK LOOP ================= -->
+    <section class="slide" data-title="The feedback loop">
+      <div class="slide-head">
+        <div class="eyebrow">The feedback loop</div>
+        <h2>Test early, test often, turn it around in two days</h2>
+      </div>
+      <div class="loop">
+        <div class="lstep"><div class="when">Share</div><h4>Post in-flight screens</h4><p>Public Figma view, linked into MOS-TEAM-DASH</p></div>
+        <div class="lstep key"><div class="when">Review</div><h4>Formal user session</h4><p>Weekly, with consultants, approvers, and managers</p></div>
+        <div class="lstep"><div class="when">Collect</div><h4>Feedback on their time</h4><p>The Confluence macro saved input between sessions</p></div>
+        <div class="lstep key"><div class="when">Update</div><h4>2 day turnaround</h4><p>Design changes back in front of users fast</p></div>
+        <div class="lstep"><div class="when">Prove</div><h4>Feasibility check</h4><p>Dev partners built each increment in React</p></div>
+      </div>
+      <svg class="return" viewBox="0 0 1408 64" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M1325 4 V34 Q1325 50 1309 50 H99 Q83 50 83 34 V4"/>
+        <polygon points="76,14 83,0 90,14" style="fill:var(--accent); stroke:none"/>
+        <text x="704" y="44" text-anchor="middle" style="paint-order:stroke; stroke:#f4f3f0; stroke-width:14px">REPEAT EVERY WEEK</text>
+      </svg>
+      <div class="stats">
+        <div class="card stat"><span class="big">Weekly</span><span class="lbl">formal feedback sessions with real users</span></div>
+        <div class="card stat"><span class="big">2 days</span><span class="lbl">from feedback to updated screens</span></div>
+        <div class="card stat"><span class="big">3 rounds</span><span class="lbl">of user feedback before year-end</span></div>
+      </div>
     </section>
 
   </main>
