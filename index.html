@@ -217,6 +217,43 @@
   }
   .signoff .tag { flex: none; }
 
+
+  /* ---------- Slide 6: Setup (Confluence + Kanban mocks) ---------- */
+  .pipeline { display: flex; align-items: center; gap: 10px; margin: -14px 0 28px; flex-wrap: wrap; }
+  .pipeline .step { font-size: 17px; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); padding: 9px 16px; border-radius: 999px; }
+  .pipeline .step em { font-style: normal; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 13px; margin-right: 10px; vertical-align: 1px; }
+  .pipeline .arrow { color: var(--accent); font-size: 22px; }
+  .setup-grid { display: grid; grid-template-columns: 820px 1fr; gap: 24px; }
+  .win { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 18px 44px rgba(28,31,36,.12); height: 470px; display: flex; flex-direction: column; }
+  .win-bar { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: #fafaf8; font-size: 14px; color: var(--ink-soft); }
+  .win-bar .dots { display: flex; gap: 6px; }
+  .win-bar .dots i { width: 10px; height: 10px; border-radius: 50%; background: #d9d6cf; display: block; }
+  .win-bar b { color: var(--ink); font-weight: 600; }
+  .conf { display: grid; grid-template-columns: 230px 1fr; flex: 1; min-height: 0; }
+  .conf-side { background: #f6f7f9; border-right: 1px solid var(--line); padding: 16px 14px; font-size: 14.5px; }
+  .conf-side .space { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); margin-bottom: 14px; font-size: 15px; }
+  .conf-side .space span { width: 28px; height: 28px; border-radius: 6px; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 12px; }
+  .conf-side ul { list-style: none; display: grid; gap: 2px; }
+  .conf-side li { padding: 7px 10px; border-radius: 6px; color: var(--ink-soft); }
+  .conf-side li.on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .conf-main { padding: 22px 26px; overflow: hidden; }
+  .conf-main .crumbs { font-size: 13px; color: var(--ink-faint); margin-bottom: 6px; }
+  .conf-main h5 { font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 14px; }
+  .conf-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+  .conf-tile { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: 13.5px; color: var(--ink-soft); }
+  .conf-tile b { display: block; font-size: 15px; color: var(--ink); margin-bottom: 2px; }
+  .macro { border: 2px dashed #b9c5d6; border-radius: 10px; padding: 14px 16px; background: #f8fafc; }
+  .macro .mlabel { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: flex; justify-content: space-between; }
+  .macro .field { font-size: 14px; color: var(--ink-soft); margin-bottom: 8px; }
+  .macro .input { border: 1px solid var(--line); background: #fff; border-radius: 6px; padding: 8px 10px; font-size: 13.5px; color: var(--ink-faint); margin-top: 4px; }
+  .macro .btn { display: inline-block; margin-top: 4px; background: var(--accent); color: #fff; font-size: 13.5px; font-weight: 600; padding: 7px 14px; border-radius: 6px; }
+  .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 14px; flex: 1; min-height: 0; background: #f6f7f9; }
+  .kcol h6 { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); margin: 2px 2px 8px; }
+  .kcard { background: #fff; border: 1px solid var(--line); border-radius: 7px; padding: 8px 9px; margin-bottom: 8px; font-size: 12.5px; line-height: 1.35; color: var(--ink); }
+  .kcard .k { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--ink-faint); }
+  .kcard .pri { font-weight: 700; }
+  .kcard .pri.h { color: #b4432f; } .kcard .pri.m { color: #9a6a12; }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -449,6 +486,78 @@
         </div>
       </div>
       <div class="signoff"><span class="tag">Final approval</span>Head of Merchant Services and Business Transformation leadership</div>
+    </section>
+
+    <!-- ================= SLIDE 6: HOW I SET UP THE WORK ================= -->
+    <section class="slide" data-title="How I set up the work">
+      <div class="slide-head">
+        <div class="eyebrow">How I set up the work</div>
+        <h2>Everything in one place, from day one</h2>
+      </div>
+      <div class="pipeline">
+        <span class="step"><em>1</em>Rallied the team and Figma access</span><span class="arrow">&#8594;</span>
+        <span class="step"><em>2</em>Built the Confluence hub</span><span class="arrow">&#8594;</span>
+        <span class="step"><em>3</em>Kicked off with partners</span><span class="arrow">&#8594;</span>
+        <span class="step"><em>4</em>Grouped users for reviews</span>
+      </div>
+      <div class="setup-grid">
+        <div class="win" aria-label="Recreated Confluence space for the project">
+          <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><b>Confluence</b> · MOS-TEAM-DASH</div>
+          <div class="conf">
+            <div class="conf-side">
+              <div class="space"><span>MS</span>MOS-TEAM-DASH</div>
+              <ul>
+                <li class="on">Project home</li>
+                <li>Product brief</li>
+                <li>Schedule &amp; milestones</li>
+                <li>Prototypes</li>
+                <li>Feedback rounds</li>
+                <li>Decisions log</li>
+                <li>Engineering feasibility</li>
+                <li>Meeting notes</li>
+              </ul>
+            </div>
+            <div class="conf-main">
+              <div class="crumbs">MOS-TEAM-DASH / Project home</div>
+              <h5>Merchant Dashboard, Round 2 review</h5>
+              <div class="conf-row">
+                <div class="conf-tile"><b>In-flight screens</b>Open to every user, no Figma login</div>
+                <div class="conf-tile"><b>This week</b>Review Tue · Updates by Thu</div>
+                <div class="conf-tile"><b>Status</b>On track for January demo</div>
+              </div>
+              <div class="macro">
+                <div class="mlabel"><span>Feedback macro</span><span>Saves as you go</span></div>
+                <div class="field">Which screen are you reviewing?<div class="input">Dashboard, To complete widget</div></div>
+                <div class="field">What's working, and what isn't?<div class="input">Type your feedback here…</div></div>
+                <span class="btn">Submit feedback</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="win" aria-label="Recreated Jira Kanban board for the project">
+          <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><b>Jira</b> · Kanban, fed by the design intake form</div>
+          <div class="kanban">
+            <div class="kcol"><h6>To do</h6>
+              <div class="kcard">Tablet breakpoint layouts<div class="k"><span>MD-118</span><span class="pri m">Med</span></div></div>
+              <div class="kcard">Empty state content<div class="k"><span>MD-121</span><span class="pri m">Med</span></div></div>
+            </div>
+            <div class="kcol"><h6>In progress</h6>
+              <div class="kcard">Personalize modal<div class="k"><span>MD-112</span><span class="pri h">High</span></div></div>
+              <div class="kcard">Round 2 feedback updates<div class="k"><span>MD-115</span><span class="pri h">High</span></div></div>
+            </div>
+            <div class="kcol"><h6>In review</h6>
+              <div class="kcard">Highcharts a11y check<div class="k"><span>MD-109</span><span class="pri h">High</span></div></div>
+              <div class="kcard">Weekly feasibility build<div class="k"><span>MD-110</span><span class="pri m">Med</span></div></div>
+            </div>
+            <div class="kcol"><h6>Done</h6>
+              <div class="kcard">Product brief<div class="k"><span>MD-101</span><span class="pri h">High</span></div></div>
+              <div class="kcard">LRC check-in<div class="k"><span>MD-104</span><span class="pri m">Med</span></div></div>
+              <div class="kcard">Dashboard layout v1<div class="k"><span>MD-106</span><span class="pri h">High</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footnote">Views recreated with fictional content to protect confidential information</p>
     </section>
 
   </main>
