@@ -302,6 +302,19 @@
   .lightbox.open { display: block; }
   .lightbox img { display: block; width: 2400px; max-width: none; margin: auto; border-radius: 8px; }
 
+
+  /* ---------- Slide 10: Prototype video ---------- */
+  .video-wrap { display: grid; grid-template-columns: 1fr 360px; gap: 36px; align-items: start; }
+  .video-frame { background: #1c1f24; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(28,31,36,.18); }
+  .video-frame video { display: block; width: 100%; height: auto; }
+  .video-side h4 { font-size: 15px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 16px; }
+  .chapters { list-style: none; display: grid; gap: 8px; }
+  .chapters button { width: 100%; display: grid; grid-template-columns: 56px 1fr; align-items: baseline; gap: 10px; text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; font: inherit; cursor: pointer; color: var(--ink); }
+  .chapters button:hover, .chapters button:focus-visible { border-color: var(--accent); outline: none; }
+  .chapters .ts { font-size: 15px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .chapters .nm { font-size: 18px; line-height: 1.35; }
+  .video-note { margin-top: 18px; font-size: 16px; line-height: 1.5; color: var(--ink-soft); }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -699,6 +712,29 @@
       </div>
     </section>
 
+    <!-- ================= SLIDE 10: PROTOTYPE WALKTHROUGH ================= -->
+    <section class="slide" data-title="Prototype walkthrough">
+      <div class="slide-head" style="margin-bottom:32px">
+        <div class="eyebrow">See it in action</div>
+        <h2>The prototype, from dashboard to filtered table</h2>
+      </div>
+      <div class="video-wrap">
+        <div class="video-frame">
+          <video id="protoVideo" src="prototype-walkthrough.mp4" poster="prototype-poster.jpg" controls preload="metadata" playsinline aria-label="Prototype walkthrough video: personalizing the dashboard, then filtering the opportunities table"></video>
+        </div>
+        <div class="video-side">
+          <h4>Jump to</h4>
+          <ul class="chapters">
+            <li><button data-t="3.5"><span class="ts">0:03</span><span class="nm">The dashboard at a glance</span></button></li>
+            <li><button data-t="10.5"><span class="ts">0:10</span><span class="nm">Personalizing and saving a view</span></button></li>
+            <li><button data-t="29"><span class="ts">0:29</span><span class="nm">The opportunities table</span></button></li>
+            <li><button data-t="33.5"><span class="ts">0:33</span><span class="nm">Quick and conditional filters</span></button></li>
+          </ul>
+          <p class="video-note">Built from the Figma prototype screens. Visuals use fictional data.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -741,6 +777,7 @@
 
   function go(i) {
     current = Math.max(0, Math.min(slides.length - 1, i));
+    document.querySelectorAll('video').forEach(v => { if (!slides[current].contains(v)) v.pause(); });
     slides.forEach((sl, n) => sl.classList.toggle('active', n === current));
     count.textContent = (current + 1) + ' / ' + slides.length;
     progress.style.width = ((current + 1) / slides.length * 100) + '%';
@@ -764,6 +801,10 @@
     el.addEventListener('keydown', e => { if (e.key === 'Enter') openZoom(el.dataset.zoom, img && img.alt); });
   });
   lb.addEventListener('click', closeZoom);
+
+  // Prototype video: chapter buttons, and pause when leaving the slide
+  const pv = document.getElementById('protoVideo');
+  document.querySelectorAll('.chapters button').forEach(b => b.addEventListener('click', () => { pv.currentTime = parseFloat(b.dataset.t); pv.play(); }));
   document.getElementById('home').addEventListener('click', () => go(0));
   document.getElementById('prev').addEventListener('click', () => go(current - 1));
   document.getElementById('next').addEventListener('click', () => go(current + 1));
@@ -771,6 +812,7 @@
 
   document.addEventListener('keydown', (e) => {
     if (lb.classList.contains('open')) { if (e.key === 'Escape') closeZoom(); return; }
+    if (e.target && e.target.tagName === 'VIDEO') return;
     if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); go(current + 1); }
     else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); go(current - 1); }
     else if (e.key === 'Home') go(0);
