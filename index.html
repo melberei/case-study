@@ -427,6 +427,30 @@
   .contact a { font-size: 19px; font-weight: 500; color: var(--ink); text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 12px 22px; }
   .contact a:hover, .contact a:focus-visible { border-color: var(--accent); outline: none; }
 
+
+  /* ---------- Merged layouts ---------- */
+  .pipeline.compact { margin: -12px 0 18px; }
+  .pipeline.compact .step { font-size: 16px; padding: 7px 14px; }
+  .setup-slide .win { height: 424px !important; }
+  .setup-slide .legend { margin-top: 16px; }
+  .setup-slide .conf-main { padding: 16px 22px; }
+  .setup-slide .conf-row { margin-bottom: 10px; }
+  .setup-slide .macro { padding: 10px 14px; }
+  .setup-slide .macro .field { margin-bottom: 6px; }
+  .setup-slide .conf-side li { padding: 5px 10px; }
+  .kd2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .kdc { padding: 28px 30px; display: flex; flex-direction: column; }
+  .kdn { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .kdc h4 { font-family: "Source Serif 4", Georgia, serif; font-size: 28px; line-height: 1.25; font-weight: 600; color: var(--ink); margin-bottom: 16px; min-height: 70px; }
+  .kdc .ticks li { font-size: 18px; }
+  .kdv { margin-top: auto; padding-top: 20px; }
+  .kdv.kdimg img { display: block; width: 100%; border-radius: 10px; border: 1px solid var(--line); }
+  .devices.mini { gap: 26px; zoom: .62; }
+  .devices.mini .lbl { font-size: 22px; margin-top: 12px; }
+  .video-side h4 span { text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--ink-faint); }
+  .fixes-list .nm s { display: block; font-size: 14px; color: var(--ink-faint); text-decoration-color: rgba(123,129,139,.6); margin-bottom: 2px; }
+  .fixes-list .nm { font-size: 17px; font-weight: 600; }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -651,97 +675,17 @@
       </div>
     </section>
 
-    <!-- ================= SLIDE 5: CONSTRAINTS ================= -->
-    <section class="slide" data-title="Constraints">
-      <div class="slide-head">
-        <div class="eyebrow">Constraints</div>
-        <h2>Six weeks, two holidays, and every checkpoint cleared</h2>
-      </div>
-      <div class="con-grid">
-        <div class="card con">
-          <div class="label">Time</div>
-          <div class="hard">6 weeks, with Thanksgiving and Christmas inside them</div>
-          <div class="how">Weekly cycles with 2 day turnarounds kept us moving.</div>
-        </div>
-        <div class="card con">
-          <div class="label">People</div>
-          <div class="hard">A December engineering furlough meant one handoff</div>
-          <div class="how">We passed the work off once and still hit the January demo.</div>
-        </div>
-        <div class="card con">
-          <div class="label">Users</div>
-          <div class="hard">Pulling a test group together for every round</div>
-          <div class="how">Consultants through approvers and up were eager to help.</div>
-        </div>
-        <div class="card con">
-          <div class="label">Feasibility</div>
-          <div class="hard">Proving it could really be built, not just designed</div>
-          <div class="how">Dev partners tested each increment in React, every week.</div>
-        </div>
-        <div class="card con">
-          <div class="label">Legal, Risk &amp; Compliance</div>
-          <div class="hard">Financial data has strict rules</div>
-          <div class="how">Cleared with them: no new data meant no new risk.</div>
-        </div>
-        <div class="card con">
-          <div class="label">Accessibility</div>
-          <div class="hard">New Highcharts visuals had to meet Wells Fargo standards</div>
-          <div class="how">Reviewed and confirmed with our accessibility partners.</div>
-        </div>
-      </div>
-      <div class="signoff"><span class="tag">Final approval</span>Head of Merchant Services and Business Transformation leadership</div>
-    </section>
-
-    <!-- ================= SLIDE 6: HOW I KICKED IT OFF ================= -->
-    <section class="slide" data-title="How I kicked it off">
-      <div class="slide-head">
-        <div class="eyebrow">How I kicked it off</div>
-        <h2>Before any pixels: people, access, and expectations</h2>
-      </div>
-      <div class="kick-grid">
-        <div class="card kick">
-          <div class="n">1</div>
-          <h4>Rallied the team</h4>
-          <ul>
-            <li>Product Designer, Content Strategist, and Prototyper signed on</li>
-            <li>Not just willing, genuinely enthusiastic about the work</li>
-          </ul>
-        </div>
-        <div class="card kick">
-          <div class="n">2</div>
-          <h4>Took the friction out of Figma</h4>
-          <ul>
-            <li>A dedicated Figma space for the design team</li>
-            <li>A public view of in-flight screens, so sales never needed Figma training</li>
-            <li>Linked straight into Confluence with a macro</li>
-          </ul>
-        </div>
-        <div class="card kick">
-          <div class="n">3</div>
-          <h4>Kicked off with every partner</h4>
-          <ul>
-            <li>Product, Engineering, Business Analysis, Content, and Design together from day one</li>
-            <li>Set expectations and the timeline</li>
-            <li>Made sure everyone knew who we were and what each role owned</li>
-          </ul>
-        </div>
-        <div class="card kick">
-          <div class="n">4</div>
-          <h4>Grouped users by people, not titles</h4>
-          <ul>
-            <li>Many users wore more than one hat: a Product Approver could also be a Sales Consultant</li>
-            <li>One group spanning every role gave us the full picture in each review</li>
-          </ul>
-        </div>
-      </div>
-      <p class="kick-note">Week one set up everything that followed.</p>
-    </section>
-
     <!-- ================= SLIDE 7: THE SYSTEM ================= -->
-    <section class="slide" data-title="The system I built">
+    <section class="slide setup-slide" data-title="How I set up the work">
       <div class="slide-head">
-        <div class="eyebrow">The system I built</div>
-        <h2>One home for the work, open to everyone</h2>
+        <div class="eyebrow">How I set up the work</div>
+        <h2>People, access, and one home for the work</h2>
+      </div>
+      <div class="pipeline compact">
+        <span class="step"><em>1</em>Rallied an eager team</span><span class="arrow">&#8594;</span>
+        <span class="step"><em>2</em>Opened Figma to everyone</span><span class="arrow">&#8594;</span>
+        <span class="step"><em>3</em>Kicked off with every partner</span><span class="arrow">&#8594;</span>
+        <span class="step"><em>4</em>Grouped users by people, not titles</span>
       </div>
       <div class="setup-grid">
         <div class="win" aria-label="Recreated Confluence space for the project">
@@ -838,138 +782,57 @@
       </div>
     </section>
 
-    <!-- ================= SLIDE 9: USER JOURNEY ================= -->
-    <section class="slide" data-title="User journey">
-      <div class="slide-head">
-        <div class="eyebrow">User journey</div>
-        <h2>One dashboard for every hat our users wore</h2>
+    <!-- ================= TWO KEY DECISIONS ================= -->
+    <section class="slide" data-title="Two key decisions">
+      <div class="slide-head" style="margin-bottom:28px">
+        <div class="eyebrow">Two key decisions</div>
+        <h2>Give users control, and stack instead of scroll</h2>
       </div>
-      <div class="flow-card" data-zoom="user-flow.png" role="button" tabindex="0" aria-label="Open the user journey full size">
-        <img src="user-flow.png" alt="User journey: log in, personalize on first visit, then branch by role. Consultants scan tiles, check To complete, and update or delegate. Approvers review and approve or decline, which updates the consultant's status. Managers view team data, success rates, and delegated work.">
-        <span class="zoom-hint">Click to enlarge</span>
-      </div>
-      <div class="flow-notes">
-        <div><b>Personalize once</b>First visit opens the personalize modal, then the dashboard stays the way each user set it.</div>
-        <div><b>Which hat today?</b>Many users were both consultants and approvers, so one dashboard served every role.</div>
-        <div><b>Status closes the loop</b>An approval or decline shows up on the consultant's dashboard right away.</div>
-      </div>
-    </section>
-
-    <!-- ================= KEY DECISION 1 ================= -->
-    <section class="slide" data-title="Key decision 1: user control">
-      <div class="slide-head" style="margin-bottom:32px">
-        <div class="eyebrow">Key decision 1</div>
-        <h2>Give users full control of their dashboard</h2>
-      </div>
-      <div class="kd-grid">
-        <div>
-          <div class="kd-decision"><div class="lbl">The decision</div><p>Full user control, plus the ability to bounce between roles</p></div>
-          <div class="kd-block"><div class="lbl">Why</div>
-            <ul class="ticks">
-              <li>Many users wore more than one hat, so one fixed layout couldn't fit everyone</li>
-              <li>Consultants needed a landing page they could make their own</li>
-            </ul></div>
-          <div class="kd-block"><div class="lbl">Guardrails</div>
-            <ul class="ticks">
-              <li>A short tip on first visit explains how it works</li>
-              <li>Save View only appears once something changes</li>
-              <li>The default layout is always one click away</li>
-            </ul></div>
+      <div class="kd2-grid">
+        <div class="card kdc">
+          <div class="kdn">Decision 1</div>
+          <h4>Full user control, plus the ability to bounce between roles</h4>
+          <ul class="ticks">
+            <li>Many users wore more than one hat, so no fixed layout fit everyone</li>
+            <li>Guardrails: a first-visit tip, Save View only after a change, and one click back to default</li>
+          </ul>
+          <div class="kdv kdimg"><img src="kd1-saved.png" alt="Dashboard header with Assigned and Delegated toggle and the saved view toggle"></div>
         </div>
-        <div class="kd-shots">
-          <div class="kd-shot a"><img src="kd1-personalize.png" alt="Personalize your dashboard modal explaining drag, reorder, and Save View"></div>
-          <span class="kd-cap" style="left:18px; top:250px">First visit: how personalizing works</span>
-          <div class="kd-shot b"><img src="kd1-saved.png" alt="Dashboard after personalizing, with the saved view toggle in the top right"></div>
-          <span class="kd-cap" style="left:32px; top:612px">Saved view, with a one-click toggle back to default</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= KEY DECISION 2 ================= -->
-    <section class="slide" data-title="Key decision 2: responsive">
-      <div class="slide-head" style="margin-bottom:32px">
-        <div class="eyebrow">Key decision 2</div>
-        <h2>Stack, don&rsquo;t scroll</h2>
-      </div>
-      <div class="rsp">
-        <div>
-          <div class="kd-decision"><div class="lbl">The decision</div><p>Move the experience to React, responsive page by page</p></div>
-          <div class="kd-block"><div class="lbl">How it adapts</div>
-            <ul class="ticks">
-              <li>Breakpoints built around tablet, the size that broke the old dashboard</li>
-              <li>On smaller screens, cards simply stack</li>
-              <li>Nothing else changes, so the layout stays familiar</li>
-            </ul></div>
-          <div class="kd-block"><div class="lbl">Why it mattered</div>
-            <ul class="ticks">
-              <li>Set up the whole Onboarding experience to go responsive, not just one page</li>
-            </ul></div>
-        </div>
-        <div>
-          <div class="devices" aria-label="Diagram: three columns of cards on desktop, two on tablet, and one stacked column on small screens">
+        <div class="card kdc">
+          <div class="kdn">Decision 2</div>
+          <h4>Move to React, responsive page by page</h4>
+          <ul class="ticks">
+            <li>Breakpoints built around tablet, the size that broke the old dashboard</li>
+            <li>On smaller screens cards simply stack, so the layout stays familiar</li>
+          </ul>
+          <div class="kdv devices mini" aria-label="Diagram: three columns of cards on desktop, two on tablet, one stacked column on small screens">
             <div class="dev"><div class="screen"><span class="bar"></span><div class="cols" style="grid-template-columns:1fr 1fr 1fr"><i class="b " style="height:70px;display:block"></i><i class="b " style="height:70px;display:block"></i><i class="b p" style="height:70px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr 1fr"><i class="b " style="height:54px;display:block"></i><i class="b " style="height:54px;display:block"></i><i class="b " style="height:54px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr 1fr"><i class="b d" style="height:40px;display:block"></i><i class="b " style="height:40px;display:block"></i><i class="b " style="height:40px;display:block"></i></div></div><div class="lbl">Desktop</div></div>
             <div class="dev"><div class="screen"><span class="bar"></span><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b " style="height:62px;display:block"></i><i class="b p" style="height:62px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b " style="height:48px;display:block"></i><i class="b " style="height:48px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b d" style="height:40px;display:block"></i><i class="b " style="height:40px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b " style="height:30px;display:block"></i><i class="b " style="height:30px;display:block"></i></div></div><div class="lbl">Tablet</div></div>
             <div class="dev"><div class="screen"><span class="bar"></span><div class="cols" style="grid-template-columns:1fr"><i class="b p" style="height:44px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:36px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:36px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b d" style="height:30px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:30px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:24px;display:block"></i></div></div><div class="lbl">Smaller</div></div>
           </div>
-          <div class="card before">
-            <div class="tablet-cut" aria-hidden="true"><span class="row" style="top:12px"></span><span class="row" style="top:28px"></span><span class="row" style="top:44px"></span><span class="row" style="top:60px"></span><span class="row" style="top:76px"></span><span class="row" style="top:92px"></span></div>
-            <p><b>Before:</b> on tablets and small laptops the table ran off the right edge, forcing a horizontal scroll. <b>After:</b> the same content, stacked to fit.</p>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ================= THE SOLUTION ================= -->
-    <section class="slide" data-title="The solution">
-      <div class="slide-head" style="margin-bottom:28px">
-        <div class="eyebrow">The solution</div>
-        <h2>From a wall of text to work at a glance</h2>
-      </div>
-      <div class="sol-grid">
-        <div class="sol-shot">
-          <div class="cap">Personalized dashboard</div>
-          <div class="frame">
-            <img src="solution-dashboard.png" alt="New Merchant Onboarding dashboard with opportunity charts, recently assigned and to-complete lists, items pending approval, and reminders">
-            <span class="pin" style="left:23%; top:45%">1</span>
-            <span class="pin" style="left:3%; top:31%">2</span>
-            <span class="pin" style="left:97%; top:38%">3</span>
-          </div>
-        </div>
-        <div class="sol-shot">
-          <div class="cap">Opportunities table</div>
-          <div class="frame">
-            <img src="solution-table.png" alt="New opportunities table with more columns, priority flags, search, filter, settings, and saved views">
-            <span class="pin" style="left:3%; top:33%">4</span>
-          </div>
-        </div>
-      </div>
-      <div class="fixes">
-        <div class="fix"><span class="num">1</span><div><div class="was">A wall of text</div><div class="now">Charts and counts read at a glance</div></div></div>
-        <div class="fix"><span class="num">2</span><div><div class="was">No control</div><div class="now">Drag, reorder, and save your own view</div></div></div>
-        <div class="fix"><span class="num">3</span><div><div class="was">Status gaps slipped by</div><div class="now">Pending approvals and to-dos up front</div></div></div>
-        <div class="fix"><span class="num">4</span><div><div class="was">Sort one column at a time</div><div class="now">Search, filters, and saved table views</div></div></div>
       </div>
     </section>
 
     <!-- ================= SLIDE 10: PROTOTYPE WALKTHROUGH ================= -->
-    <section class="slide" data-title="Prototype walkthrough">
+    <section class="slide" data-title="The solution">
       <div class="slide-head" style="margin-bottom:32px">
-        <div class="eyebrow">See it in action</div>
-        <h2>The prototype, from dashboard to filtered table</h2>
+        <div class="eyebrow">The solution</div>
+        <h2>From a wall of text to work at a glance</h2>
       </div>
       <div class="video-wrap">
         <div class="video-frame">
           <video id="protoVideo" src="prototype-walkthrough.mp4" poster="prototype-poster.jpg" controls preload="metadata" playsinline aria-label="Prototype walkthrough video: personalizing the dashboard, then filtering the opportunities table"></video>
         </div>
         <div class="video-side">
-          <h4>Jump to</h4>
-          <ul class="chapters">
-            <li><button data-t="3.5"><span class="ts">0:03</span><span class="nm">The dashboard at a glance</span></button></li>
-            <li><button data-t="10.5"><span class="ts">0:10</span><span class="nm">Personalizing and saving a view</span></button></li>
-            <li><button data-t="29"><span class="ts">0:29</span><span class="nm">The opportunities table</span></button></li>
-            <li><button data-t="33.5"><span class="ts">0:33</span><span class="nm">Quick and conditional filters</span></button></li>
+          <h4>What changed <span>· click to jump</span></h4>
+          <ul class="chapters fixes-list">
+            <li><button data-t="3.5"><span class="ts">0:03</span><span class="nm"><s>A wall of text</s>Charts and counts at a glance</span></button></li>
+            <li><button data-t="10.5"><span class="ts">0:10</span><span class="nm"><s>No control</s>Drag, reorder, and save your own view</span></button></li>
+            <li><button data-t="3.5"><span class="ts">0:03</span><span class="nm"><s>Status gaps slipped by</s>Pending approvals and to-dos up front</span></button></li>
+            <li><button data-t="29"><span class="ts">0:29</span><span class="nm"><s>Sort one column at a time</s>Search, filters, and saved views</span></button></li>
           </ul>
-          <p class="video-note">Built from the Figma prototype screens. Visuals use fictional data.</p>
+          <p class="video-note">Prototype screens from Figma. Visuals use fictional data.</p>
         </div>
       </div>
     </section>
@@ -1062,6 +925,64 @@
       </div>
     </section>
 
+    <!-- ================= SLIDE 5: CONSTRAINTS ================= -->
+    <section data-backup="1" class="slide" data-title="Constraints">
+      <div class="slide-head">
+        <div class="eyebrow">Backup · Constraints</div>
+        <h2>Six weeks, two holidays, and every checkpoint cleared</h2>
+      </div>
+      <div class="con-grid">
+        <div class="card con">
+          <div class="label">Time</div>
+          <div class="hard">6 weeks, with Thanksgiving and Christmas inside them</div>
+          <div class="how">Weekly cycles with 2 day turnarounds kept us moving.</div>
+        </div>
+        <div class="card con">
+          <div class="label">People</div>
+          <div class="hard">A December engineering furlough meant one handoff</div>
+          <div class="how">We passed the work off once and still hit the January demo.</div>
+        </div>
+        <div class="card con">
+          <div class="label">Users</div>
+          <div class="hard">Pulling a test group together for every round</div>
+          <div class="how">Consultants through approvers and up were eager to help.</div>
+        </div>
+        <div class="card con">
+          <div class="label">Feasibility</div>
+          <div class="hard">Proving it could really be built, not just designed</div>
+          <div class="how">Dev partners tested each increment in React, every week.</div>
+        </div>
+        <div class="card con">
+          <div class="label">Legal, Risk &amp; Compliance</div>
+          <div class="hard">Financial data has strict rules</div>
+          <div class="how">Cleared with them: no new data meant no new risk.</div>
+        </div>
+        <div class="card con">
+          <div class="label">Accessibility</div>
+          <div class="hard">New Highcharts visuals had to meet Wells Fargo standards</div>
+          <div class="how">Reviewed and confirmed with our accessibility partners.</div>
+        </div>
+      </div>
+      <div class="signoff"><span class="tag">Final approval</span>Head of Merchant Services and Business Transformation leadership</div>
+    </section>
+
+    <!-- ================= SLIDE 9: USER JOURNEY ================= -->
+    <section data-backup="1" class="slide" data-title="User journey">
+      <div class="slide-head">
+        <div class="eyebrow">Backup · User journey</div>
+        <h2>One dashboard for every hat our users wore</h2>
+      </div>
+      <div class="flow-card" data-zoom="user-flow.png" role="button" tabindex="0" aria-label="Open the user journey full size">
+        <img src="user-flow.png" alt="User journey: log in, personalize on first visit, then branch by role. Consultants scan tiles, check To complete, and update or delegate. Approvers review and approve or decline, which updates the consultant's status. Managers view team data, success rates, and delegated work.">
+        <span class="zoom-hint">Click to enlarge</span>
+      </div>
+      <div class="flow-notes">
+        <div><b>Personalize once</b>First visit opens the personalize modal, then the dashboard stays the way each user set it.</div>
+        <div><b>Which hat today?</b>Many users were both consultants and approvers, so one dashboard served every role.</div>
+        <div><b>Status closes the loop</b>An approval or decline shows up on the consultant's dashboard right away.</div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -1086,6 +1007,7 @@
   const menuBtn = document.getElementById('menuBtn');
   const menuList = document.getElementById('menuList');
   let current = 0;
+  const mainCount = slides.filter(sl => !sl.dataset.backup).length;
 
   // Scale the 1600x900 stage to fit the window
   function fit() {
@@ -1096,8 +1018,11 @@
 
   // Build the slide menu from each slide's data-title
   slides.forEach((sl, i) => {
+    if (sl.dataset.backup && !(slides[i-1] && slides[i-1].dataset.backup)) {
+      const h = document.createElement('h3'); h.textContent = 'Backup'; menuList.appendChild(h);
+    }
     const b = document.createElement('button');
-    b.innerHTML = '<span>' + (i + 1) + '</span>' + (sl.dataset.title || 'Slide ' + (i + 1));
+    b.innerHTML = '<span>' + (sl.dataset.backup ? '·' : (i + 1)) + '</span>' + (sl.dataset.title || 'Slide ' + (i + 1));
     b.addEventListener('click', () => { go(i); toggleMenu(false); });
     menuList.appendChild(b);
   });
@@ -1106,8 +1031,9 @@
     current = Math.max(0, Math.min(slides.length - 1, i));
     document.querySelectorAll('video').forEach(v => { if (!slides[current].contains(v)) v.pause(); });
     slides.forEach((sl, n) => sl.classList.toggle('active', n === current));
-    count.textContent = (current + 1) + ' / ' + slides.length;
-    progress.style.width = ((current + 1) / slides.length * 100) + '%';
+    const isBackup = slides[current].dataset.backup;
+    count.textContent = isBackup ? 'Backup' : (current + 1) + ' / ' + mainCount;
+    progress.style.width = (isBackup ? 100 : (current + 1) / mainCount * 100) + '%';
     menuList.querySelectorAll('button').forEach((b, n) => b.setAttribute('aria-current', n === current));
     history.replaceState(null, '', '#' + (current + 1));
   }
