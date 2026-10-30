@@ -344,6 +344,20 @@
   .kd-shot.b { right: 0; top: 300px; }
   .kd-cap { position: absolute; font-size: 15px; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; box-shadow: 0 6px 16px rgba(28,31,36,.12); }
 
+
+  /* ---------- The solution ---------- */
+  .sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .sol-shot { position: relative; }
+  .sol-shot .frame { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 20px 48px rgba(28,31,36,.15); background: #fff; }
+  .sol-shot img { display: block; width: 100%; }
+  .sol-shot .pin { z-index: 2; }
+  .sol-shot .cap { font-size: 16px; font-weight: 600; color: var(--ink-soft); margin-bottom: 10px; letter-spacing: .02em; }
+  .fixes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 26px; }
+  .fix { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+  .fix .num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+  .fix .was { font-size: 15px; color: var(--ink-faint); text-decoration: line-through; text-decoration-color: rgba(123,129,139,.6); margin-bottom: 3px; }
+  .fix .now { font-size: 18px; line-height: 1.35; color: var(--ink); font-weight: 600; }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -799,6 +813,38 @@
           <div class="kd-shot b"><img src="kd1-saved.png" alt="Dashboard after personalizing, with the saved view toggle in the top right"></div>
           <span class="kd-cap" style="left:32px; top:612px">Saved view, with a one-click toggle back to default</span>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= THE SOLUTION ================= -->
+    <section class="slide" data-title="The solution">
+      <div class="slide-head" style="margin-bottom:28px">
+        <div class="eyebrow">The solution</div>
+        <h2>From a wall of text to work at a glance</h2>
+      </div>
+      <div class="sol-grid">
+        <div class="sol-shot">
+          <div class="cap">Personalized dashboard</div>
+          <div class="frame">
+            <img src="solution-dashboard.png" alt="New Merchant Onboarding dashboard with opportunity charts, recently assigned and to-complete lists, items pending approval, and reminders">
+            <span class="pin" style="left:23%; top:45%">1</span>
+            <span class="pin" style="left:3%; top:31%">2</span>
+            <span class="pin" style="left:97%; top:38%">3</span>
+          </div>
+        </div>
+        <div class="sol-shot">
+          <div class="cap">Opportunities table</div>
+          <div class="frame">
+            <img src="solution-table.png" alt="New opportunities table with more columns, priority flags, search, filter, settings, and saved views">
+            <span class="pin" style="left:3%; top:33%">4</span>
+          </div>
+        </div>
+      </div>
+      <div class="fixes">
+        <div class="fix"><span class="num">1</span><div><div class="was">A wall of text</div><div class="now">Charts and counts read at a glance</div></div></div>
+        <div class="fix"><span class="num">2</span><div><div class="was">No control</div><div class="now">Drag, reorder, and save your own view</div></div></div>
+        <div class="fix"><span class="num">3</span><div><div class="was">Status gaps slipped by</div><div class="now">Pending approvals and to-dos up front</div></div></div>
+        <div class="fix"><span class="num">4</span><div><div class="was">Sort one column at a time</div><div class="now">Search, filters, and saved table views</div></div></div>
       </div>
     </section>
 
