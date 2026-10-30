@@ -376,6 +376,56 @@
   .why .lbl { font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
   .why .ticks li { font-size: 19px; }
 
+
+  /* ---------- Key decision 2: responsive ---------- */
+  .rsp { display: grid; grid-template-columns: 500px 1fr; gap: 56px; align-items: start; }
+  .devices { display: grid; grid-template-columns: 1.45fr 1fr .62fr; gap: 26px; align-items: end; }
+  .dev .lbl { font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); margin-top: 12px; text-align: center; }
+  .screen { background: #fff; border: 2px solid #c9ccd2; border-radius: 12px; padding: 10px; display: grid; gap: 7px; }
+  .screen .bar { height: 14px; border-radius: 4px; background: #d71e28; }
+  .screen .cols { display: grid; gap: 7px; }
+  .screen .b { border-radius: 5px; background: #e9eaee; }
+  .screen .b.p { background: #6c5ac7; } .screen .b.d { background: #5b5f69; }
+  .before { margin-top: 30px; display: grid; grid-template-columns: 240px 1fr; gap: 22px; align-items: center; padding: 18px 22px; }
+  .tablet-cut { position: relative; height: 120px; border: 2px solid #c9ccd2; border-radius: 10px; overflow: hidden; background: #fff; }
+  .tablet-cut .row { position: absolute; left: 8px; height: 10px; border-radius: 3px; background: #e2e3e7; width: 330px; }
+  .tablet-cut::after { content: "\2192 \2192"; position: absolute; right: 8px; bottom: 6px; color: #b4432f; font-weight: 700; font-size: 18px; }
+  .before p { font-size: 18px; line-height: 1.45; color: var(--ink-soft); }
+  .before b { color: var(--ink); }
+
+  /* ---------- Outcomes ---------- */
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .ostat { padding: 26px 26px 24px; }
+  .ostat .big { font-family: "Source Serif 4", Georgia, serif; font-size: 52px; font-weight: 600; color: var(--accent); line-height: 1; margin-bottom: 12px; }
+  .ostat p { font-size: 18px; line-height: 1.4; color: var(--ink-soft); }
+  .proof { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin-top: 22px; }
+  .proof .card { padding: 24px 28px; }
+  .proof .lbl { font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+  .proof .ticks li { font-size: 19px; }
+  .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .kpis div { font-size: 16px; line-height: 1.35; color: var(--ink-soft); background: var(--bg); border-radius: 8px; padding: 10px 12px; }
+  .kpis b { display: block; color: var(--ink); font-size: 16.5px; }
+
+
+  /* ---------- Reflection & close ---------- */
+  .refl { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .refl .card { padding: 26px 32px; }
+  .refl .item { padding: 12px 0 !important; }
+  .refl .lbl { font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 18px; }
+  .refl .keep .lbl { color: var(--accent); }
+  .refl .diff .lbl { color: #9a5a12; }
+  .refl .item { padding: 14px 0; border-top: 1px solid var(--line); }
+  .refl .item:first-of-type { border-top: 0; padding-top: 0; }
+  .refl .item b { display: block; font-size: 21px; color: var(--ink); margin-bottom: 4px; }
+  .refl .item span { font-size: 18px; line-height: 1.45; color: var(--ink-soft); }
+  .takeaway { margin-top: 26px; font-family: "Source Serif 4", Georgia, serif; font-size: 28px; line-height: 1.35; color: var(--ink); }
+  .close-slide { display: grid; place-items: center; text-align: center; }
+  .close-slide h2 { font-size: 76px; margin: 18px 0 20px; }
+  .close-slide .sub { font-size: 24px; color: var(--ink-soft); }
+  .contact { display: flex; gap: 16px; justify-content: center; margin-top: 44px; flex-wrap: wrap; }
+  .contact a { font-size: 19px; font-weight: 500; color: var(--ink); text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 12px 22px; }
+  .contact a:hover, .contact a:focus-visible { border-color: var(--accent); outline: none; }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -834,6 +884,40 @@
       </div>
     </section>
 
+    <!-- ================= KEY DECISION 2 ================= -->
+    <section class="slide" data-title="Key decision 2: responsive">
+      <div class="slide-head" style="margin-bottom:32px">
+        <div class="eyebrow">Key decision 2</div>
+        <h2>Stack, don&rsquo;t scroll</h2>
+      </div>
+      <div class="rsp">
+        <div>
+          <div class="kd-decision"><div class="lbl">The decision</div><p>Move the experience to React, responsive page by page</p></div>
+          <div class="kd-block"><div class="lbl">How it adapts</div>
+            <ul class="ticks">
+              <li>Breakpoints built around tablet, the size that broke the old dashboard</li>
+              <li>On smaller screens, cards simply stack</li>
+              <li>Nothing else changes, so the layout stays familiar</li>
+            </ul></div>
+          <div class="kd-block"><div class="lbl">Why it mattered</div>
+            <ul class="ticks">
+              <li>Set up the whole Onboarding experience to go responsive, not just one page</li>
+            </ul></div>
+        </div>
+        <div>
+          <div class="devices" aria-label="Diagram: three columns of cards on desktop, two on tablet, and one stacked column on small screens">
+            <div class="dev"><div class="screen"><span class="bar"></span><div class="cols" style="grid-template-columns:1fr 1fr 1fr"><i class="b " style="height:70px;display:block"></i><i class="b " style="height:70px;display:block"></i><i class="b p" style="height:70px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr 1fr"><i class="b " style="height:54px;display:block"></i><i class="b " style="height:54px;display:block"></i><i class="b " style="height:54px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr 1fr"><i class="b d" style="height:40px;display:block"></i><i class="b " style="height:40px;display:block"></i><i class="b " style="height:40px;display:block"></i></div></div><div class="lbl">Desktop</div></div>
+            <div class="dev"><div class="screen"><span class="bar"></span><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b " style="height:62px;display:block"></i><i class="b p" style="height:62px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b " style="height:48px;display:block"></i><i class="b " style="height:48px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b d" style="height:40px;display:block"></i><i class="b " style="height:40px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr 1fr"><i class="b " style="height:30px;display:block"></i><i class="b " style="height:30px;display:block"></i></div></div><div class="lbl">Tablet</div></div>
+            <div class="dev"><div class="screen"><span class="bar"></span><div class="cols" style="grid-template-columns:1fr"><i class="b p" style="height:44px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:36px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:36px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b d" style="height:30px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:30px;display:block"></i></div><div class="cols" style="grid-template-columns:1fr"><i class="b " style="height:24px;display:block"></i></div></div><div class="lbl">Smaller</div></div>
+          </div>
+          <div class="card before">
+            <div class="tablet-cut" aria-hidden="true"><span class="row" style="top:12px"></span><span class="row" style="top:28px"></span><span class="row" style="top:44px"></span><span class="row" style="top:60px"></span><span class="row" style="top:76px"></span><span class="row" style="top:92px"></span></div>
+            <p><b>Before:</b> on tablets and small laptops the table ran off the right edge, forcing a horizontal scroll. <b>After:</b> the same content, stacked to fit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= THE SOLUTION ================= -->
     <section class="slide" data-title="The solution">
       <div class="slide-head" style="margin-bottom:28px">
@@ -911,6 +995,69 @@
             <li>Accessibility built in, not bolted on</li>
             <li>Nothing new for engineering to build from scratch</li>
           </ul></div>
+      </div>
+    </section>
+
+    <!-- ================= OUTCOMES ================= -->
+    <section class="slide" data-title="Outcomes">
+      <div class="slide-head" style="margin-bottom:30px">
+        <div class="eyebrow">Outcomes</div>
+        <h2>From concept to a funded build</h2>
+      </div>
+      <div class="stat-grid">
+        <div class="card ostat"><div class="big">6 weeks</div><p>from kickoff to a live executive demo</p></div>
+        <div class="card ostat"><div class="big">Funded</div><p>with a dedicated scrum team assigned</p></div>
+        <div class="card ostat"><div class="big">6 sprints</div><p>about 12 weeks, estimated for the full build</p></div>
+        <div class="card ostat"><div class="big">0</div><p>new components and no new platform to buy</p></div>
+      </div>
+      <div class="proof">
+        <div class="card"><div class="lbl">Proof it landed</div>
+          <ul class="ticks">
+            <li>Engineering was already building it on their own in the test environment</li>
+            <li>Business Transformation leadership asked to move it forward</li>
+            <li>Proved we could build in React instead of buying Salesforce</li>
+          </ul></div>
+        <div class="card"><div class="lbl">KPIs to track after launch</div>
+          <div class="kpis">
+            <div><b>Time on task</b>Finding what needs attention</div>
+            <div><b>Task success</b>Spotting pending approvals</div>
+            <div><b>Feature adoption</b>Users saving a custom view</div>
+            <div><b>Satisfaction</b>CSAT from consultants and managers</div>
+          </div></div>
+      </div>
+    </section>
+
+    <!-- ================= REFLECTION ================= -->
+    <section class="slide" data-title="Reflection">
+      <div class="slide-head" style="margin-bottom:30px">
+        <div class="eyebrow">Reflection</div>
+        <h2>What I&rsquo;d keep, and what I&rsquo;d do differently</h2>
+      </div>
+      <div class="refl">
+        <div class="card keep"><div class="lbl">What I&rsquo;d keep</div>
+          <div class="item"><b>Feedback without friction</b><span>Public screens and a Confluence macro meant users weighed in every week, with no Figma training.</span></div>
+          <div class="item"><b>Engineering in the room early</b><span>Weekly feasibility builds turned a design concept into a proven, fundable plan.</span></div>
+        </div>
+        <div class="card diff"><div class="lbl">What I&rsquo;d do differently</div>
+          <div class="item"><b>Ask for more time</b><span>Six weeks with two holiday weeks inside them left very little room between rounds.</span></div>
+          <div class="item"><b>Add one more resource</b><span>One more set of hands would have eased the load through the holidays and the December handoff.</span></div>
+          <div class="item"><b>Capture baselines on day one</b><span>Measuring the old dashboard first would have turned great feedback into hard numbers.</span></div>
+        </div>
+      </div>
+      <p class="takeaway">Speed came from setting up the people and the process first.</p>
+    </section>
+
+    <!-- ================= THANK YOU ================= -->
+    <section class="slide close-slide" data-title="Thank you">
+      <div>
+        <div class="eyebrow">Thank you</div>
+        <h2>Questions?</h2>
+        <p class="sub">Marylynne Berei &middot; Senior Lead Product Designer</p>
+        <div class="contact">
+          <a href="https://melberei.github.io" target="_blank" rel="noopener">melberei.github.io</a>
+          <a href="https://www.linkedin.com/in/melberei26" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:melb122@gmail.com">melb122@gmail.com</a>
+        </div>
       </div>
     </section>
 
