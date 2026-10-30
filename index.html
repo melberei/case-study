@@ -358,6 +358,24 @@
   .fix .was { font-size: 15px; color: var(--ink-faint); text-decoration: line-through; text-decoration-color: rgba(123,129,139,.6); margin-bottom: 3px; }
   .fix .now { font-size: 18px; line-height: 1.35; color: var(--ink); font-weight: 600; }
 
+
+  /* ---------- Accessibility & design system ---------- */
+  .ds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .ds { padding: 28px 30px; }
+  .ds .k { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .ds h4 { font-size: 24px; font-weight: 600; line-height: 1.25; color: var(--ink); margin-bottom: 12px; }
+  .ds p { font-size: 18px; line-height: 1.45; color: var(--ink-soft); }
+  .ds-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; }
+  .candy { display: grid; grid-template-columns: 300px 1fr; gap: 26px; align-items: center; padding: 24px 28px; border: 2px solid var(--accent); }
+  .candy .zoom { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+  .candy .zoom img { display: block; width: 100%; }
+  .candy .ring { position: absolute; left: 0.6%; top: 6%; width: 7.5%; height: 24%; border: 3px solid #d9822b; border-radius: 10px; }
+  .candy h4 { font-size: 23px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .candy p { font-size: 18px; line-height: 1.45; color: var(--ink-soft); }
+  .why { padding: 24px 28px; }
+  .why .lbl { font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+  .why .ticks li { font-size: 19px; }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -868,6 +886,31 @@
           </ul>
           <p class="video-note">Built from the Figma prototype screens. Visuals use fictional data.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= ACCESSIBILITY & DESIGN SYSTEM ================= -->
+    <section class="slide" data-title="Accessibility and design system">
+      <div class="slide-head" style="margin-bottom:30px">
+        <div class="eyebrow">Accessibility and design system</div>
+        <h2>Proven parts, accessible from day one</h2>
+      </div>
+      <div class="ds-grid">
+        <div class="card ds"><div class="k">Foundation</div><h4>Wells Fargo Design System</h4><p>Enterprise color, type, and accessibility standards underneath everything.</p></div>
+        <div class="card ds"><div class="k">Components</div><h4>Merchant Services Design System</h4><p>Existing onboarding cards, tables, modals, and filters. No new components needed.</p></div>
+        <div class="card ds"><div class="k">Data visualization</div><h4>Highcharts</h4><p>Charts reviewed with our accessibility partners and confirmed to meet Wells Fargo standards.</p></div>
+      </div>
+      <div class="ds-bottom">
+        <div class="card candy">
+          <div class="zoom"><img src="candy-box.png" alt="Close-up of a dashboard card header with the six-dot drag handle beside the title"><span class="ring"></span></div>
+          <div><div class="k" style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">The one addition</div><h4>The &ldquo;candy box&rdquo; handle</h4><p>A small grip on every card signals it can be dragged and reordered.</p></div>
+        </div>
+        <div class="card why"><div class="lbl">Why it mattered</div>
+          <ul class="ticks">
+            <li>Consistent with the rest of Onboarding</li>
+            <li>Accessibility built in, not bolted on</li>
+            <li>Nothing new for engineering to build from scratch</li>
+          </ul></div>
       </div>
     </section>
 
