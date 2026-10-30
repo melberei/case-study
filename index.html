@@ -328,6 +328,22 @@
   .also { margin-top: 24px; display: flex; align-items: center; gap: 18px; background: var(--surface); border: 1px dashed #b9c5d6; border-radius: 12px; padding: 18px 24px; font-size: 19px; line-height: 1.45; color: var(--ink-soft); }
   .also b { color: var(--ink); }
 
+
+  /* ---------- Key decisions ---------- */
+  .kd-grid { display: grid; grid-template-columns: 560px 1fr; gap: 56px; align-items: start; }
+  .kd-decision { background: var(--accent); color: #fff; border-radius: 14px; padding: 24px 28px; margin-bottom: 26px; }
+  .kd-decision .lbl { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .8; margin-bottom: 8px; }
+  .kd-decision p { font-family: "Source Serif 4", Georgia, serif; font-size: 27px; line-height: 1.3; }
+  .kd-block { margin-bottom: 22px; }
+  .kd-block .lbl { font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+  .kd-block .ticks li { font-size: 19px; }
+  .kd-shots { position: relative; height: 640px; }
+  .kd-shot { position: absolute; width: 760px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 54px rgba(28,31,36,.18); background: #fff; }
+  .kd-shot img { display: block; width: 100%; }
+  .kd-shot.a { left: 0; top: 0; }
+  .kd-shot.b { right: 0; top: 300px; }
+  .kd-cap { position: absolute; font-size: 15px; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; box-shadow: 0 6px 16px rgba(28,31,36,.12); }
+
   /* ---------- Navigation chrome ---------- */
   .progress { position: absolute; left: 0; top: 0; height: 5px; background: var(--accent); transition: width .35s ease; }
   .controls {
@@ -753,6 +769,36 @@
         <div><b>Personalize once</b>First visit opens the personalize modal, then the dashboard stays the way each user set it.</div>
         <div><b>Which hat today?</b>Many users were both consultants and approvers, so one dashboard served every role.</div>
         <div><b>Status closes the loop</b>An approval or decline shows up on the consultant's dashboard right away.</div>
+      </div>
+    </section>
+
+    <!-- ================= KEY DECISION 1 ================= -->
+    <section class="slide" data-title="Key decision 1: user control">
+      <div class="slide-head" style="margin-bottom:32px">
+        <div class="eyebrow">Key decision 1</div>
+        <h2>Give users full control of their dashboard</h2>
+      </div>
+      <div class="kd-grid">
+        <div>
+          <div class="kd-decision"><div class="lbl">The decision</div><p>Full user control, plus the ability to bounce between roles</p></div>
+          <div class="kd-block"><div class="lbl">Why</div>
+            <ul class="ticks">
+              <li>Many users wore more than one hat, so one fixed layout couldn't fit everyone</li>
+              <li>Consultants needed a landing page they could make their own</li>
+            </ul></div>
+          <div class="kd-block"><div class="lbl">Guardrails</div>
+            <ul class="ticks">
+              <li>A short tip on first visit explains how it works</li>
+              <li>Save View only appears once something changes</li>
+              <li>The default layout is always one click away</li>
+            </ul></div>
+        </div>
+        <div class="kd-shots">
+          <div class="kd-shot a"><img src="kd1-personalize.png" alt="Personalize your dashboard modal explaining drag, reorder, and Save View"></div>
+          <span class="kd-cap" style="left:18px; top:250px">First visit: how personalizing works</span>
+          <div class="kd-shot b"><img src="kd1-saved.png" alt="Dashboard after personalizing, with the saved view toggle in the top right"></div>
+          <span class="kd-cap" style="left:32px; top:612px">Saved view, with a one-click toggle back to default</span>
+        </div>
       </div>
     </section>
 
